@@ -1,0 +1,158 @@
+/* основные цвета сайта */
+:root {
+    --color-bg: #000000;          
+    --color-surface: #141414;     
+    --color-border: #2a2a2a;      
+    --color-primary: #198754;     
+    --color-text-muted: #adb5bd;  
+    --color-text-white: #f8f9fa;  
+}
+
+/* базовые настройки шрифта и фона для всей страницы */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--color-bg); 
+    color: var(--color-text-white);
+}
+
+/* темно-серый фон и рамка для карточек, шапки и сайдбара */
+.bg-dark-gray { 
+    background-color: var(--color-surface); 
+    border: 1px solid var(--color-border); 
+    border-radius: 8px; /* немного скруглить углы */
+}
+
+/* серый цвет для второстепенного текста (даты, описания) */
+.text-light-gray { 
+    color: var(--color-text-muted); 
+}
+
+/* стили для зеленых кнопок */
+.btn-green {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-weight: 700;
+}
+
+/* эффект при наведении на зеленую кнопку (чуть темнеет) */
+.btn-green:hover {
+    background-color: #157347;
+    border-color: #157347;
+    color: var(--color-text-white);
+}
+
+/* стили для обычных белых ссылок в меню */
+.link-white {
+    color: var(--color-text-white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* ссылка становится зеленой при наведении */
+.link-white:hover {
+    color: var(--color-primary);
+}
+
+/* стили для ссылок на ответы (answers) */
+.link-answers {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* добавляем подчеркивание при наведении на ответы */
+.link-answers:hover {
+    text-decoration: underline;
+}
+
+/* плашки с тегами (css, python и т.д.) */
+.tag-badge {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+/* тег становится светлее при наведении */
+.tag-badge:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-white);
+}
+
+/* жестко задаем размер аватарок в карточках, чтобы они не растягивались */
+.q-avatar {
+    width: 64px;
+    height: 64px;
+    object-fit: cover; /* обрезает картинку под квадрат, чтобы не плющило */
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+}
+
+/* настройки текста для самих вопросов и ответов */
+.q-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* стили для всех полей ввода (логин, регистрация, создание вопроса) */
+.form-control {
+    background-color: var(--color-surface);
+    color: var(--color-text-white);
+    border: 1px solid var(--color-border);
+}
+
+/* когда кликаем в поле, убираем стандартную синюю обводку бутстрапа */
+.form-control:focus {
+    background-color: var(--color-surface);
+    color: var(--color-text-white);
+    border-color: var(--color-primary); /* оставляем только зеленую рамку */
+    box-shadow: none;
+}
+
+/* цвет текста-подсказки внутри поля ввода */
+.form-control::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+}
+
+/* фиксируем размер кнопок лайков, чтобы стрелочки не съезжали */
+.vote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 28px;
+    padding: 0;
+    line-height: 1;
+}
+
+/* перекрашиваем стандартную пагинацию бутстрапа под наш темный стиль */
+.pagination .page-link {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-white);
+}
+
+/* эффект при наведении на номера страниц */
+.pagination .page-link:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-white);
+}
+
+/* выделяем активную страницу (на которой мы сейчас находимся) */
+.pagination .active .page-link {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+
+/* стиль для неактивных элементов пагинации (например, троеточия) */
+.pagination .disabled .page-link {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+}

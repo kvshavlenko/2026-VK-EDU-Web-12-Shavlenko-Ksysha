@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskPupkin - How to build a moon park ?</title>
+    <link rel="icon" href="static/img/pupkin.png" type="image/png">
+    
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-pure-black">
+
+    <!-- шапка -->
+    <nav class="navbar navbar-expand-lg bg-dark-gray border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">AskPupkin</a>
+
+            <form class="d-flex flex-grow-1 mx-4 search-form" role="search">
+                <input class="form-control me-2 search-input" type="search" placeholder="Поиск..." aria-label="Search">
+                <a href="ask.html" class="btn btn-green">ASK!</a>
+            </form>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="login.html" class="link-white fw-bold">log in</a>
+                <a href="signup.html" class="link-white fw-bold">register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- контент -->
+    <main class="container flex-grow-1 mt-4">
+        <div class="row g-4">
+            
+            <!-- левая колонка -->
+            <div class="col-lg-8">
+                
+                <!-- вопрос -->
+                <div class="card bg-dark-gray p-4 mb-3 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h1 class="fs-3 fw-bold text-white mb-2">How to build a moon park ?</h1>
+                            <p class="text-light-gray small mb-0">Asked 5 minutes ago</p>
+                        </div>
+                        <img src="static/img/avatar.png" alt="Avatar" class="q-avatar ms-3">
+                    </div>
+                    
+                    <p class="q-text text-light-gray mb-3">
+                        Lorem ipsum - dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-2">
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">black-jack</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">bender</a>
+                        </div>
+                        
+                        <!-- лайки -->
+                        <div class="d-flex align-items-center gap-2 text-light-gray small">
+                            <button class="btn btn-sm btn-outline-success vote-btn">▲</button>
+                            <span class="fw-bold">12</span>
+                            <button class="btn btn-sm btn-outline-danger vote-btn">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-secondary my-4">
+
+                <!-- первый ответ -->
+                <div class="card bg-dark-gray p-4 mb-3 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="flex-grow-1 me-3">
+                            <p class="q-text text-light-gray mb-2">
+                                First of all I would like to thank you for the invitation to participate in such a... Russia is the huge territory which in many respects needs to be render habitable.
+                            </p>
+                            <p class="text-light-gray small mb-0">answered 2 hours ago</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img src="static/img/avatar.png" alt="Avatar" class="q-avatar" style="width: 50px; height: 50px;">
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="form-check mb-0">
+                                <input class="form-check-input" type="checkbox" id="correctCheck1" checked>
+                                <label class="form-check-label text-light-gray small" for="correctCheck1">
+                                    Mark as correct
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- лайки -->
+                        <div class="d-flex align-items-center gap-2 text-light-gray small">
+                            <button class="btn btn-sm btn-success vote-btn">▲</button>
+                            <span class="fw-bold">4</span>
+                            <button class="btn btn-sm btn-outline-danger vote-btn">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-secondary my-4">
+
+                <!-- второй ответ -->
+                <div class="card bg-dark-gray p-4 mb-3 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="flex-grow-1 me-3">
+                            <p class="q-text text-light-gray mb-2">
+                                First of all I would like to thank you for the invitation to participate in such a ... Russia is the huge territory which in many respects needs to be render habitable.
+                            </p>
+                            <p class="text-light-gray small mb-0">answered 1 hour ago</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img src="static/img/avatar.png" alt="Avatar" class="q-avatar" style="width: 50px; height: 50px;">
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="form-check mb-0">
+                                <input class="form-check-input" type="checkbox" id="correctCheck2">
+                                <label class="form-check-label text-light-gray small" for="correctCheck2">
+                                    Mark as correct
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 text-light-gray small">
+                            <button class="btn btn-sm btn-outline-success vote-btn">▲</button>
+                            <span class="fw-bold">0</span>
+                            <button class="btn btn-sm btn-outline-danger vote-btn">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- пагинация -->
+                <nav aria-label="Answers pagination" class="mt-3 mb-4">
+                    <ul class="pagination pagination-sm justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+
+                <hr class="border-secondary my-4">
+
+                <!-- форма ответа -->
+                <div class="mt-2">
+                    <label for="answerText" class="form-label fw-bold text-white mb-2">Your Answer</label>
+                    <textarea class="form-control mb-3" id="answerText" rows="5" placeholder="Enter your answer here."></textarea>
+                
+                    <button type="submit" class="btn btn-green">Answer!</button>
+                </div>
+
+            </div>
+
+            <!-- правая колонка -->
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Popular Tags</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">python</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">django</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">javascript</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">css</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">bootstrap</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">html</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Dr. Pepper</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mr. Brown</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mrs. Robinson</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Uncle Ben</a></li>
+                            <li class="mb-0"><a href="#" class="link-white fw-bold">👤 Aunt May</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- подвал -->
+    <footer class="bg-dark-gray border-top border-secondary py-4 mt-auto">
+        <div class="container text-center">
+            <p class="text-light-gray mb-0">&copy; 2026 AskPupkin. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskPupkin - Register</title>
+    <link rel="icon" href="static/img/pupkin.png" type="image/png">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-pure-black">
+
+    <!-- шапка -->
+    <nav class="navbar navbar-expand-lg bg-dark-gray border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">AskPupkin</a>
+            
+            <!-- поиск -->
+            <form class="d-flex flex-grow-1 mx-4 search-form" role="search">
+                <input class="form-control me-2 search-input" type="search" placeholder="Поиск...">
+                <a href="ask.html" class="btn btn-green fw-bold">ASK!</a>
+            </form>
+            
+            <!-- авторизация -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="login.html" class="link-white fw-bold">log in</a>
+                <a href="signup.html" class="link-white fw-bold">register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- контент -->
+    <main class="container flex-grow-1 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card bg-dark-gray p-4 shadow-sm">
+                    <h2 class="text-center text-white mb-4">Registration</h2>
+                    
+                    <!-- сообщение об ошибке -->
+                    <div class="alert alert-danger p-2 text-center small" role="alert">
+                        Sorry, this email address allready registred!
+                    </div>
+
+                    <form>
+                        <!-- логин -->
+                        <div class="mb-3">
+                            <label for="regLogin" class="form-label text-white">Login</label>
+                            <input type="text" class="form-control" id="regLogin" value="dr_pepper" placeholder="Enter login">
+                            <div class="form-text text-light-gray">Только латинские буквы и цифры.</div>
+                        </div>
+                        
+                        <!-- почта с ошибкой -->
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control is-invalid" id="regEmail" value="dr.pepper@mail.ru" placeholder="Enter email">
+                            <div class="invalid-feedback">This email address is already taken.</div>
+                        </div>
+                        
+                        <!-- никнейм -->
+                        <div class="mb-3">
+                            <label for="regNick" class="form-label text-white">NickName</label>
+                            <input type="text" class="form-control" id="regNick" value="Dr. Pepper" placeholder="Enter nickname">
+                        </div>
+                        
+                        <!-- пароль -->
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="regPassword" placeholder="********">
+                            <div class="form-text text-light-gray">Минимум 8 символов.</div>
+                        </div>
+                        
+                        <!-- повтор пароля -->
+                        <div class="mb-3">
+                            <label for="regPasswordConfirm" class="form-label text-white">Repeat password</label>
+                            <input type="password" class="form-control" id="regPasswordConfirm" placeholder="********">
+                        </div>
+                        
+                        <!-- загрузка аватарки -->
+                        <div class="mb-4">
+                            <label for="avatarUpload" class="form-label text-white">Upload avatar</label>
+                            <input class="form-control" type="file" id="avatarUpload">
+                        </div>
+
+                        <!-- кнопка -->
+                        <button type="submit" class="btn btn-green w-100">Register!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- подвал -->
+    <footer class="bg-dark-gray border-top border-secondary py-4 mt-auto">
+        <div class="container text-center">
+            <p class="text-light-gray mb-0">&copy; 2026 AskPupkin. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

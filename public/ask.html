@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskPupkin - New Question</title>
+    <link rel="icon" href="static/img/pupkin.png" type="image/png">
+    
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-pure-black">
+
+    <!-- шапка -->
+    <nav class="navbar navbar-expand-lg bg-dark-gray border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">AskPupkin</a>
+
+            <!-- поиск -->
+            <form class="d-flex flex-grow-1 mx-4 search-form" role="search">
+                <input class="form-control me-2" type="search" placeholder="Поиск..." aria-label="Search">
+                <a href="ask.html" class="btn btn-green">ASK!</a>
+            </form>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="login.html" class="link-white fw-bold">log in</a>
+                <a href="signup.html" class="link-white fw-bold">register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- контент -->
+    <main class="container flex-grow-1 mt-4">
+        <div class="row g-4">
+            
+            <!-- левая колонка -->
+            <div class="col-lg-8">
+                
+                <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
+                    <h1 class="fs-4 fw-bold mb-0 text-white">New Question</h1>
+                </div>
+
+                <form>
+                    <!-- заголовок -->
+                    <div class="row mb-4 align-items-center">
+                        <label for="questionTitle" class="col-sm-2 col-form-label fw-bold text-white fs-5">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="questionTitle" placeholder="Введите заголовок вопроса...">
+                            <div class="form-text text-light-gray">Максимум 150 символов.</div>
+                        </div>
+                    </div>
+
+                    <!-- текст -->
+                    <div class="row mb-4">
+                        <label for="questionText" class="col-sm-2 col-form-label fw-bold text-white fs-5">Text</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="questionText" rows="6" placeholder="Опишите подробно, что случилось..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- теги -->
+                    <div class="row mb-4 align-items-center">
+                        <label for="questionTags" class="col-sm-2 col-form-label fw-bold text-white fs-5">Tags</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="questionTags" placeholder="css, html, python">
+                            <div class="form-text text-light-gray">Введите теги через запятую.</div>
+                        </div>
+                    </div>
+
+                    <!-- кнопка -->
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button type="submit" class="btn btn-green">ASK!</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- правая колонка -->
+            <div class="col-lg-4">
+                
+                <div class="card mb-4 bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Popular Tags</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="tag.html" class="badge tag-badge p-2">python</a>
+                            <a href="tag.html" class="badge tag-badge p-2">django</a>
+                            <a href="tag.html" class="badge tag-badge p-2">javascript</a>
+                            <a href="tag.html" class="badge tag-badge p-2">css</a>
+                            <a href="tag.html" class="badge tag-badge p-2">bootstrap</a>
+                            <a href="tag.html" class="badge tag-badge p-2">html</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Dr. Pepper</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mr. Brown</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mrs. Robinson</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Uncle Ben</a></li>
+                            <li class="mb-0"><a href="#" class="link-white fw-bold">👤 Aunt May</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- подвал -->
+    <footer class="bg-dark-gray border-top border-secondary py-4 mt-auto">
+        <div class="container text-center">
+            <p class="text-light-gray mb-0">&copy; 2026 AskPupkin. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

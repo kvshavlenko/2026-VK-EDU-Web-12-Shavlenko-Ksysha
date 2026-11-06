@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AskPupkin</title>
+    <link rel="icon" href="static/img/pupkin.png" type="image/png">
+    
+    <!-- подключаем бутстрап -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-pure-black">
+
+    <!-- шапка сайта -->
+    <nav class="navbar navbar-expand-lg bg-dark-gray border-bottom border-secondary">
+        <div class="container">
+            
+            <!-- логотип ведет на главную -->
+            <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">AskPupkin</a>
+
+            <!-- форма поиска и кнопка -->
+            <form class="d-flex flex-grow-1 mx-4 search-form" role="search">
+                <input class="form-control me-2 search-input" type="search" placeholder="Поиск..." aria-label="Search">
+                <a href="ask.html" class="btn btn-green fw-bold">ASK!</a>
+            </form>
+
+            <!-- блок профиля юзера, когда он залогинен -->
+            <div class="d-flex align-items-center gap-3">
+                <img src="https://via.placeholder.com/40/333/fff" alt="Avatar" class="rounded-circle border border-secondary" width="40" height="40">
+                <div class="d-flex flex-column user-info">
+                    <a class="fw-bold text-white text-decoration-none" href="profile.html">Dr. Pepper</a>
+                    <div class="d-flex gap-2 small">
+                        <a href="profile.html" class="link-white">settings</a>
+                        <a href="#" class="text-decoration-none text-danger">log out</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- основная часть страницы -->
+    <main class="container flex-grow-1 mt-4">
+        <div class="row g-4">
+            
+            <!-- левая колонка для контента -->
+            <div class="col-lg-8">
+                
+                <!-- тут будет меняться контент в зависимости от страницы -->
+                
+                <h2 class="text-white">Здесь будет контент страницы</h2>
+                <p class="text-light-gray">Скопируй этот base.html в свой index.html и замени этот текст на карточки вопросов.</p>
+                
+            </div>
+
+            <!-- правая колонка, она одинаковая на всех страницах -->
+            <div class="col-lg-4">
+                
+                <!-- блок с популярными тегами -->
+                <div class="card mb-4 bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Popular Tags</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">python</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">django</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">javascript</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">css</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">bootstrap</a>
+                            <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">html</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- блок с лучшими пользователями -->
+                <div class="card bg-dark-gray shadow-sm">
+                    <div class="card-header bg-transparent border-secondary py-3">
+                        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Dr. Pepper</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mr. Brown</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mrs. Robinson</a></li>
+                            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Uncle Ben</a></li>
+                            <li class="mb-0"><a href="#" class="link-white fw-bold">👤 Aunt May</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- подвал сайта-->
+    <footer class="bg-dark-gray border-top border-secondary py-4 mt-auto">
+        <div class="container text-center">
+            <p class="text-light-gray mb-0">&copy; 2026 AskPupkin. Все права защищены.</p>
+            <div class="mt-2 small">
+                <a href="#" class="link-white me-3">О проекте</a>
+                <a href="#" class="link-white">Помощь</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- скрипты бутстрапа -->
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
