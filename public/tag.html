@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AskPupkin - Tag: bender</title>
-   <link rel="icon" href="static/img/pupkin.png" type="image/png">
+    <link rel="icon" href="static/img/pupkin.png" type="image/png">
     
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100 bg-pure-black">
 
-    <!-- ================= ШАПКА ================= -->
+    <!-- шапка -->
     <nav class="navbar navbar-expand-lg bg-dark-gray border-bottom border-secondary">
         <div class="container">
             <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">AskPupkin</a>
@@ -21,14 +21,12 @@
                 <a href="ask.html" class="btn btn-green fw-bold">ASK!</a>
             </form>
 
-            <!-- Блок пользователя (авторизован) -->
+            <!-- профиль -->
             <div class="d-flex align-items-center gap-3">
-                <!-- ИСПРАВЛЕНО: локальная аватарка -->
                 <img src="static/img/avatar.png" alt="Avatar" class="rounded-circle border border-secondary" width="40" height="40">
                 <div class="d-flex flex-column user-info">
                     <a class="fw-bold text-white" href="profile.html">Dr. Pepper</a>
                     <div class="d-flex gap-2 small">
-                        <!-- ИСПРАВЛЕНО: settings ведет на profile.html -->
                         <a href="profile.html" class="link-white">settings</a>
                         <a href="#" class="text-decoration-none text-danger">log out</a>
                     </div>
@@ -37,14 +35,14 @@
         </div>
     </nav>
 
-    <!-- ================= ОСНОВНОЙ КОНТЕНТ ================= -->
+    <!-- контент -->
     <main class="container flex-grow-1 mt-4">
         <div class="row g-4">
             
-            <!-- ЛЕВАЯ КОЛОНКА (Вопросы) -->
+            <!-- левая колонка -->
             <div class="col-lg-8">
                 
-                <!-- ЗАГОЛОВОК: Tag: bender -->
+                <!-- заголовок тега -->
                 <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
                     <h1 class="fs-4 fw-bold mb-0 text-white d-flex align-items-center gap-2">
                         Tag: 
@@ -54,12 +52,11 @@
                     <a href="index.html" class="fs-6 text-decoration-none text-light-gray link-white">Hot Questions</a>
                 </div>
 
-                <!-- Карточка вопроса 1 -->
+                <!-- первый вопрос -->
                 <div class="card mb-3 bg-dark-gray shadow-sm">
                     <div class="card-body p-4">
                         <div class="d-flex gap-3">
                             <div class="flex-shrink-0">
-                                <!-- ИСПРАВЛЕНО: локальная аватарка -->
                                 <img src="static/img/avatar.png" alt="Avatar" class="q-avatar">
                             </div>
                             <div class="flex-grow-1">
@@ -76,7 +73,7 @@
                                         <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">css</a>
                                     </div>
                                     
-                                    <!-- ИСПРАВЛЕНО: статичные кнопки без onclick -->
+                                    <!-- лайки -->
                                     <div class="ms-auto d-flex align-items-center gap-2 text-light-gray small">
                                         <button class="btn btn-sm btn-outline-success vote-btn">▲</button>
                                         <span class="fw-bold">12</span>
@@ -88,12 +85,11 @@
                     </div>
                 </div>
 
-                <!-- Карточка вопроса 2 -->
+                <!-- второй вопрос -->
                 <div class="card mb-3 bg-dark-gray shadow-sm">
                     <div class="card-body p-4">
                         <div class="d-flex gap-3">
                             <div class="flex-shrink-0">
-                                <!-- ИСПРАВЛЕНО: локальная аватарка -->
                                 <img src="static/img/avatar.png" alt="Avatar" class="q-avatar">
                             </div>
                             <div class="flex-grow-1">
@@ -110,8 +106,7 @@
                                         <a href="tag.html" class="badge tag-badge p-2 text-decoration-none">layout</a>
                                     </div>
                                     
-                                    <!-- ИСПРАВЛЕНО: статичные кнопки без onclick -->
-                                    <!-- Блок голосования (нажат лайк) -->
+                                    <!-- лайки -->
                                     <div class="ms-auto d-flex align-items-center gap-2 text-light-gray small">
                                         <button class="btn btn-sm btn-success vote-btn">▲</button>
                                         <span class="fw-bold">13</span>
@@ -123,7 +118,7 @@
                     </div>
                 </div>
 
-                <!-- Пагинация -->
+                <!-- пагинация -->
                 <nav aria-label="Page navigation" class="mt-4 mb-5">
                     <ul class="pagination justify-content-center">
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -135,10 +130,10 @@
                 </nav>
             </div>
 
-            <!-- ПРАВАЯ КОЛОНКА (Сайдбар) -->
+            <!-- правая колонка -->
             <div class="col-lg-4">
                 
-                <!-- Popular Tags -->
+                <!-- теги -->
                 <div class="card mb-4 bg-dark-gray shadow-sm">
                     <div class="card-header bg-transparent border-secondary py-3">
                         <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Popular Tags</h3>
@@ -154,7 +149,7 @@
                     </div>
                 </div>
 
-                <!-- Best Members -->
+                <!-- участники -->
                 <div class="card bg-dark-gray shadow-sm">
                     <div class="card-header bg-transparent border-secondary py-3">
                         <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
@@ -174,8 +169,7 @@
         </div>
     </main>
 
-    <!-- ================= ПОДВАЛ (FOOTER) ================= -->
-    <!-- ИСПРАВЛЕНО: Добавлен футер по ТЗ -->
+    <!-- подвал -->
     <footer class="bg-dark-gray border-top border-secondary py-4 mt-auto">
         <div class="container text-center">
             <p class="text-light-gray mb-0">&copy; 2026 AskPupkin. Все права защищены.</p>

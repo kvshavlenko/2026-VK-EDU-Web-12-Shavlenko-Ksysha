@@ -25,7 +25,7 @@
                 <div class="d-flex flex-column user-info">
                     <a class="fw-bold text-white text-decoration-none" href="profile.html">Dr. Pepper</a>
                     <div class="d-flex gap-2 small">
-                        <a href="profile.html" class="link-white fw-bold">settings</a>
+                        <a href="profile.html" class="link-white">settings</a>
                         <a href="#" class="text-decoration-none text-danger">log out</a>
                     </div>
                 </div>
@@ -37,40 +37,73 @@
     <main class="container flex-grow-1 mt-4">
         <div class="row g-4">
             
-            <!-- левая колонка -->
+            <!-- левая колонка с формой настроек -->
             <div class="col-lg-8">
                 
                 <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
-                    <h1 class="fs-4 fw-bold mb-0 text-white">Settings</h1>
+                    <h1 class="fs-4 fw-bold mb-0 text-white">Settings: Dr. Pepper</h1>
                 </div>
 
-                <div class="card bg-dark-gray p-4 shadow-sm">
-                    <form>
-                        <div class="mb-3">
-                            <label for="profileEmail" class="form-label text-white">Email</label>
-                            <input type="email" class="form-control is-invalid" id="profileEmail" value="dr.pepper@mail.ru">
+                <form>
+                    <!-- поле login -->
+                    <div class="row mb-3 align-items-center">
+                        <label for="profileLogin" class="col-sm-3 col-form-label text-white">Login</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="profileLogin" value="dr_pepper">
+                        </div>
+                    </div>
+
+                    <!-- поле email с ошибкой и подсказкой -->
+                    <div class="row mb-3 align-items-center">
+                        <label for="profileEmail" class="col-sm-3 col-form-label text-white">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control is-invalid" id="profileEmail" value="drpepper@mail.ru">
+                            <!-- ошибка поля по ТЗ -->
                             <div class="invalid-feedback">Вы ввели невалидный email.</div>
+                            <!-- подсказка по ТЗ -->
                             <div class="form-text text-light-gray">Мы никогда не передаем ваш email третьим лицам.</div>
                         </div>
-                        
-                        <div class="mb-3">
-                            <label for="profileNick" class="form-label text-white">NickName</label>
+                    </div>
+
+                    <!-- поле никнейм с подсказкой -->
+                    <div class="row mb-4 align-items-center">
+                        <label for="profileNick" class="col-sm-3 col-form-label text-white">NickName</label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="profileNick" value="Dr. Pepper">
+                            <!-- подсказка по ТЗ -->
                             <div class="form-text text-light-gray">Максимум 20 символов.</div>
                         </div>
-                        
-                        <div class="mb-4">
-                            <label for="profileAvatar" class="form-label text-white">Upload new avatar</label>
-                            <input class="form-control" type="file" id="profileAvatar">
-                            <div class="form-text text-light-gray">Поддерживаются форматы JPG, PNG. Максимум 2МБ.</div>
-                        </div>
+                    </div>
 
-                        <button type="submit" class="btn btn-green w-100">Save Changes</button>
-                    </form>
-                </div>
+                    <!-- блок загрузки аватарки как на макете -->
+                    <div class="row mb-4">
+                        <label class="col-sm-3 col-form-label text-white">Upload avatar</label>
+                        <div class="col-sm-9">
+                            <!-- превью аватарки -->
+                            <div class="border border-secondary d-flex align-items-center justify-content-center mb-2" style="width: 100px; height: 100px; background-color: #1a1a1a;">
+                                <img src="static/img/avatar.png" alt="avatar" class="w-100 h-100 object-fit-cover" style="opacity: 0.5;">
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="text" class="form-control" style="max-width: 200px;" value="c:\avatar.jpg" readonly>
+                                <div class="position-relative overflow-hidden d-inline-block">
+                                    <button type="button" class="btn btn-outline-secondary">choose</button>
+                                    <input type="file" class="position-absolute top-0 start-0 w-100 h-100 opacity-0 cursor-pointer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- кнопка сохранения -->
+                    <div class="row">
+                        <div class="col-sm-9 offset-sm-3">
+                            <button type="submit" class="btn btn-green px-4">Save</button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
 
-            <!-- правая колонка -->
+            <!-- правая колонка с твоими тегами и участниками -->
             <div class="col-lg-4">
                 
                 <!-- теги -->
@@ -90,7 +123,7 @@
                     </div>
                 </div>
 
-                <!-- лучшие участники -->
+                <!-- участники -->
                 <div class="card bg-dark-gray shadow-sm">
                     <div class="card-header bg-transparent border-secondary py-3">
                         <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
