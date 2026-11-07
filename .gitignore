@@ -1,6 +1,24 @@
+# OS and IDE
+.DS_Store
 .idea/
 .vscode/
+
+# Python
 __pycache__/
-.DS_Store
+*.pyc
 *.log
+
+# Virtual environments
+venv/
+.venv/
+
+# Django
+db.sqlite3
 *.sqlite3
+
+# Environment variables
+.env
+
+# Static and Media
+static/
+media/

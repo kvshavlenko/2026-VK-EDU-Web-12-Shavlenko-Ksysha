@@ -1,0 +1,30 @@
+<div class="card mb-4 bg-dark-gray shadow-sm">
+    <div class="card-header bg-transparent border-secondary py-3">
+        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Popular Tags</h3>
+    </div>
+    <div class="card-body">
+        <div class="d-flex flex-wrap gap-2">
+            <a href="{% url 'tag' tag_name='python' %}" class="badge tag-badge p-2 text-decoration-none">python</a>
+            <a href="{% url 'tag' tag_name='django' %}" class="badge tag-badge p-2 text-decoration-none">django</a>
+            <a href="{% url 'tag' tag_name='javascript' %}" class="badge tag-badge p-2 text-decoration-none">javascript</a>
+            <a href="{% url 'tag' tag_name='css' %}" class="badge tag-badge p-2 text-decoration-none">css</a>
+            <a href="{% url 'tag' tag_name='bootstrap' %}" class="badge tag-badge p-2 text-decoration-none">bootstrap</a>
+            <a href="{% url 'tag' tag_name='html' %}" class="badge tag-badge p-2 text-decoration-none">html</a>
+        </div>
+    </div>
+</div>
+
+<div class="card bg-dark-gray shadow-sm">
+    <div class="card-header bg-transparent border-secondary py-3">
+        <h3 class="fs-6 fw-bold text-uppercase text-light-gray mb-0">Best Members</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Dr. Pepper</a></li>
+            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mr. Brown</a></li>
+            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Mrs. Robinson</a></li>
+            <li class="mb-3"><a href="#" class="link-white fw-bold">👤 Uncle Ben</a></li>
+            <li class="mb-0"><a href="#" class="link-white fw-bold">👤 Aunt May</a></li>
+        </ul>
+    </div>
+</div>
