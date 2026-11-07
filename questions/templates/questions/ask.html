@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
+        <h1 class="fs-4 fw-bold mb-0 text-white">New Question</h1>
+    </div>
+
+    <form>
+        <!-- заголовок -->
+        <div class="row mb-4 align-items-center">
+            <label for="questionTitle" class="col-sm-2 col-form-label fw-bold text-white fs-5">Title</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="questionTitle" placeholder="Введите заголовок вопроса...">
+                <div class="form-text text-light-gray">Максимум 150 символов.</div>
+            </div>
+        </div>
+
+        <!-- текст -->
+        <div class="row mb-4">
+            <label for="questionText" class="col-sm-2 col-form-label fw-bold text-white fs-5">Text</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="questionText" rows="6" placeholder="Опишите подробно, что случилось..."></textarea>
+            </div>
+        </div>
+
+        <!-- теги -->
+        <div class="row mb-4 align-items-center">
+            <label for="questionTags" class="col-sm-2 col-form-label fw-bold text-white fs-5">Tags</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="questionTags" placeholder="css, html, python">
+                <div class="form-text text-light-gray">Введите теги через запятую.</div>
+            </div>
+        </div>
+
+        <!-- кнопка -->
+        <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-green">ASK!</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

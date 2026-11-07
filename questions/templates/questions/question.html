@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Блок вопроса -->
+    <div class="card bg-dark-gray p-4 mb-3 shadow-sm">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+                <h1 class="fs-3 fw-bold text-white mb-2">How to build a moon park ?</h1>
+                <p class="text-light-gray small mb-0">Asked 5 minutes ago</p>
+            </div>
+            <img src="{% static 'img/avatar.png' %}" alt="Avatar" class="q-avatar ms-3">
+        </div>
+        <p class="q-text text-light-gray mb-3">
+            Lorem ipsum - dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-2">
+                <!-- ИСПРАВЛЕНО: добавили пробелы и написали теги в кавычках -->
+                <a href="{% url 'tag' tag_name='black-jack' %}" class="badge tag-badge p-2 text-decoration-none">black-jack</a>
+                <a href="{% url 'tag' tag_name='bender' %}" class="badge tag-badge p-2 text-decoration-none">bender</a>
+            </div>
+            <div class="d-flex align-items-center gap-2 text-light-gray small">
+                <button class="btn btn-sm btn-outline-success vote-btn">▲</button>
+                <span class="fw-bold">12</span>
+                <button class="btn btn-sm btn-outline-danger vote-btn">▼</button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <!-- Цикл по ответам из нашей функции пагинации -->
+    {% for answer in page_obj %}
+    <div class="card bg-dark-gray p-4 mb-3 shadow-sm">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="flex-grow-1 me-3">
+                <p class="q-text text-light-gray mb-2">{{ answer.text }}</p>
+                <p class="text-light-gray small mb-0">answered just now</p>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="{% static 'img/avatar.png' %}" alt="Avatar" class="q-avatar" style="width: 50px; height: 50px;">
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <div class="form-check mb-0">
+                    <!-- Если answer.is_correct == True, ставим галочку -->
+                    <input class="form-check-input" type="checkbox" id="correctCheck{{ answer.id }}" {% if answer.is_correct %}checked{% endif %}>
+                    <label class="form-check-label text-light-gray small" for="correctCheck{{ answer.id }}">
+                        Mark as correct
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2 text-light-gray small">
+                <button class="btn btn-sm {% if answer.likes > 0 %}btn-success{% else %}btn-outline-success{% endif %} vote-btn">▲</button>
+                <span class="fw-bold">{{ answer.likes }}</span>
+                <button class="btn btn-sm btn-outline-danger vote-btn">▼</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Пагинация для ответов -->
+    <nav aria-label="Answers pagination" class="mt-3 mb-4">
+        <ul class="pagination pagination-sm justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <hr class="border-secondary my-4">
+
+    <!-- Форма ответа -->
+    <div class="mt-2">
+        <label for="answerText" class="form-label fw-bold text-white mb-2">Your Answer</label>
+        <textarea class="form-control mb-3" id="answerText" rows="5" placeholder="Enter your answer here."></textarea>
+        <button type="submit" class="btn btn-green">Answer!</button>
+    </div>
+{% endblock %}

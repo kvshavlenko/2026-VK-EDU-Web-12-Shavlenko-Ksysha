@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
+        <h1 class="fs-4 fw-bold mb-0 text-white">Registration</h1>
+    </div>
+
+    <div class="card bg-dark-gray p-4 shadow-sm">
+        <!-- сообщение об ошибке формы -->
+        <div class="alert alert-danger p-2 text-center small" role="alert">
+            Sorry, this email address already registred!
+        </div>
+
+        <form>
+            <!-- поле Login -->
+            <div class="row mb-3 align-items-center">
+                <label for="regLogin" class="col-sm-3 col-form-label text-white">Login</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="regLogin" value="dr_pepper">
+                </div>
+            </div>
+
+            <!-- поле Email с ошибкой поля -->
+            <div class="row mb-3 align-items-center">
+                <label for="regEmail" class="col-sm-3 col-form-label text-white">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control is-invalid" id="regEmail" value="drpepper@mail.ru">
+                    <!-- текст ошибки -->
+                    <div class="invalid-feedback">Вы ввели невалидный email.</div>
+                </div>
+            </div>
+
+            <!-- поле NickName -->
+            <div class="row mb-3 align-items-center">
+                <label for="regNick" class="col-sm-3 col-form-label text-white">NickName</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="regNick" value="Dr. Pepper">
+                </div>
+            </div>
+
+            <!-- поле Password -->
+            <div class="row mb-3 align-items-center">
+                <label for="regPassword" class="col-sm-3 col-form-label text-white">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="regPassword" placeholder="********">
+                </div>
+            </div>
+
+            <!-- поле Repeat password -->
+            <div class="row mb-3 align-items-center">
+                <label for="regPasswordConfirm" class="col-sm-3 col-form-label text-white">Repeat password</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="regPasswordConfirm" placeholder="********">
+                </div>
+            </div>
+
+            <!-- блок загрузки аватарки -->
+            <div class="row mb-4">
+                <label class="col-sm-3 col-form-label text-white">Upload avatar</label>
+                <div class="col-sm-9">
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="text" class="form-control" style="max-width: 200px;" value="c:\avatar.jpg" readonly>
+                        <div class="position-relative overflow-hidden d-inline-block">
+                            <button type="button" class="btn btn-outline-secondary">choose</button>
+                            <input type="file" class="position-absolute top-0 start-0 w-100 h-100 opacity-0 cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- кнопка отправки -->
+            <div class="row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-green px-4">Register!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

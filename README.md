@@ -1,13 +1,12 @@
 # AskPupkin
 
-## Как открыть
-Откройте файл `public/index.html` в браузере (или запустите через Live Server в VS Code).
+## Запуск проекта
 
-## Страницы
-- `index.html` — Главная (список вопросов)
-- `question.html` — Страница одного вопроса
-- `ask.html` — Форма добавления вопроса
-- `tag.html` — Страница тега
-- `login.html` — Форма входа
-- `signup.html` — Форма регистрации
-- `profile.html` — Настройки профиля
+### Локальный запуск
+1. Создать venv: `python -m venv venv`
+2. Активировать: `source venv/bin/activate`
+3. Установить зависимости: `pip install -r requirements.txt`
+4. Запустить: `python manage.py runserver`
+
+### Запуск через Docker
+1. `docker compose up --build`

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-secondary pb-2">
+        <h1 class="fs-4 fw-bold mb-0 text-white">Hot Questions</h1>
+        <a href="{% url 'index' %}" class="fs-6 text-decoration-none text-light-gray link-white">New Questions</a>
+    </div>
+
+    {% for question in page_obj %}
+    <div class="card mb-3 bg-dark-gray shadow-sm">
+        <div class="card-body p-4">
+            <div class="d-flex gap-3">
+                <div class="flex-shrink-0">
+                    <img src="{% static 'img/avatar.png' %}" alt="Avatar" class="q-avatar">
+                </div>
+                <div class="flex-grow-1">
+                    <h2 class="card-title fs-5 mb-2">
+                        <a href="{% url 'question' pk=question.id %}" class="text-decoration-none text-white link-white">{{ question.title }}</a>
+                    </h2>
+                    <p class="card-text text-light-gray mb-2">{{ question.text }}</p>
+                    <p class="text-light-gray small mb-3">asked just now</p>
+                    
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                        <a href="{% url 'question' pk=question.id %}" class="small link-answers">answers ({{ question.answers_count }})</a>
+                        <div class="d-flex gap-1">
+                            {% for tag in question.tags %}
+                                <a href="{% url 'tag' tag_name=tag %}" class="badge tag-badge text-decoration-none">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="ms-auto d-flex align-items-center gap-2 text-light-gray small">
+                            <button class="btn btn-sm btn-outline-success py-0 px-2">▲</button>
+                            <span class="fw-bold">{{ question.likes }}</span>
+                            <button class="btn btn-sm btn-outline-danger py-0 px-2">▼</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <nav class="mt-4 mb-5">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endblock %}
